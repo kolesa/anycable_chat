@@ -1,0 +1,13 @@
+default: &default
+  # gRPC server host
+  rpc_host: "localhost:50051"
+  # Redis URL (for broadcasting)
+  redis_url: "redis://localhost:6379"
+  # Redis channel name
+  redis_channel: "anycable"
+
+development:
+  <<: *default
+
+production:
+  <<: *default

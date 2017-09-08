@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: yourname
+  password:
+
+development:
+ <<: *default
+ database: anycable_test_development
+
+test:
+ <<: *default
+ database: anycable_test_test
+
+production:
+ <<: *default
+ database: anycable_test_development
